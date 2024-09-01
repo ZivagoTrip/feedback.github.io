@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="userForm">
+
+            <center>
+                <img src="./LOGO VARIATION 3.png" alt="logo" class="logo">
+            </center>
+
+            <h2>Feedback Form</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="number">Phone Number:</label>
+            <input type="text" id="number" name="phone_number" required>
+
+            <label for="date">Date of Trip:</label>
+            <input type="date" id="date" name="date_of_trip" required><br>
+<br>
+            <fieldset>
+                <legend><b>Overall Experience</b></legend>
+
+                <label for="experience_overall">How would you rate your overall experience?</label>
+                <input type="number" id="experience_overall" name="experience_overall" min="1" max="10" placeholder="1-10" required>
+
+                <label for="highlights">What were the highlights of your trip?</label>
+                <textarea id="highlights" name="highlights" required></textarea>
+
+            </fieldset>
+<br>
+            <fieldset>
+                <legend><b>Accommodation</b></legend>
+
+                <label for="accommodation_rating">How would you rate your accommodation?</label>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Excellent</th>
+                            <th>Good</th>
+                            <th>Fair</th>
+                            <th>Poor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cleanliness</td>
+                            <td><input type="radio" name="cleanliness" value="Excellent"></td>
+                            <td><input type="radio" name="cleanliness" value="Good"></td>
+                            <td><input type="radio" name="cleanliness" value="Fair"></td>
+                            <td><input type="radio" name="cleanliness" value="Poor"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Service</td>
+                            <td><input type="radio" name="service" value="Excellent"></td>
+                            <td><input type="radio" name="service" value="Good"></td>
+                            <td><input type="radio" name="service" value="Fair"></td>
+                            <td><input type="radio" name="service" value="Poor"></td>
+                        </tr>
+                        <tr>
+                            <td>Value</td>
+                            <td><input type="radio" name="value" value="Excellent"></td>
+                            <td><input type="radio" name="value" value="Good"></td>
+                            <td><input type="radio" name="value" value="Fair"></td>
+                            <td><input type="radio" name="value" value="Poor"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </fieldset>
+<br>
+            <fieldset>
+                <legend><b>Transportation</b></legend>
+
+                <label for="transportation_rating">How would you rate the transportation?</label>
+                <input type="number" id="transportation_rating" name="transportation_rating" min="1" max="10" placeholder="1-10" required>
+
+                <label for="transport_issues">Did you face any challenges with transportation during your trip?</label>
+                <textarea id="transport_issues" name="transport_issues" required></textarea>
+            </fieldset>
+<br>
+            <fieldset>
+                <legend><b>Activities and Attractions</b></legend>
+
+                <label for="activities_enjoyed">Which attractions or activities did you enjoy the most?</label>
+                <textarea id="activities_enjoyed" name="activities_enjoyed" required></textarea>
+
+                <label for="activities_disappoint">Were there any attractions or activities that did not meet your expectations?</label>
+                <textarea id="activities_disappoint" name="activities_disappoint" required></textarea>
+
+                <label for="missed_activities">Were there any must-see places or activities that you missed?</label>
+                <textarea id="missed_activities" name="missed_activities" required></textarea>
+            </fieldset>
+<br>
+            <fieldset>
+                <legend><b>Food and Dining</b></legend>
+
+                <label for="food_rating">How would you rate the quality and variety of food?</label>
+                <input type="number" id="food_rating" name="food_rating" min="1" max="10" placeholder="1-10" required>
+
+                <label for="dining_issues">Did you experience any issues with dining options?</label>
+                <textarea id="dining_issues" name="dining_issues" required></textarea>
+
+            </fieldset>
+<br>
+            <fieldset>
+                <legend><b>Value for Money</b></legend>
+
+                <label>Do you think the trip was worth the money spent?</label>
+                <div class="rating">
+                  <input type="radio"  id="value_yes" name="value_for_money" value="yes" required>
+                  <label for="value_yes" class="rate-value">Yes</label>
+                </div>
+
+                <div class="rating">
+                  <input type="radio"  id="value_no" name="value_for_money" value="no" required>
+                  <label for="value_no" class="rate-value">No</label>
+                </div>
+
+                <label for="value_reason">Please explain your answer.</label>
+                <textarea id="value_reason" name="value_reason" required></textarea>
+
+                <label for="cost_mismatch">Were there any aspects where you felt the cost did not match the value received?</label>
+                <textarea id="cost_mismatch" name="cost_mismatch" required></textarea>
+            </fieldset>
+<br>
+            <fieldset>
+                <legend><b>Suggestions and Improvements</b></legend>
+
+                <label for="improvements">What improvements would you suggest for future trips?</label>
+                <textarea id="improvements" name="improvements" required></textarea>
+            </fieldset>
+<br>
+            <fieldset>
+                <legend><b>Next Trip!!</b></legend>
+
+                <label for="next_trip">Where would you plan for your next trip?</label>
+                <textarea id="next_trip" name="next_trip" required></textarea>
+            </fieldset>
+<br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
